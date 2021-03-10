@@ -1,3 +1,5 @@
+import viLang from './i18n/vi';
+
 export default {
   server: {
     port: 8080, // default: 3000
@@ -43,6 +45,7 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxt/http',
     'nuxt-element-ui',
+    'nuxt-i18n',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -58,4 +61,15 @@ export default {
     components: ['Select', 'Option'],
     locale: 'en',
   },
+
+  i18n: {
+    locales: ['en', 'vi'],
+    defaultLocale: 'vi',
+    vueI18n: {
+      fallbackLocale: 'vi',
+      messages: {
+        vi: viLang,
+      }
+    }
+  }
 }

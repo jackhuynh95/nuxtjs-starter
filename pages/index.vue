@@ -1,6 +1,7 @@
 <template lang="pug">
   div
     h1 {{ ip }}
+    div(v-t='"header_menu.sign_in"')
     NuxtLink(to='/item/123') DETAIL
     form(@submit.prevent='')
       input(v-model='text' name='text' v-validate='"required"')
