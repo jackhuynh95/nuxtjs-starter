@@ -1,0 +1,28 @@
+.btn-group.btn-group-danger
+  button.btn
+    border 1px solid red-milano
+    color red-milano
+    font-weight 600
+    flex 1
+    padding-top 8.5px
+    padding-bottom @padding-top
+
+  button.btn.active,
+  button.btn:hover:not(:disabled):not(.active)
+    background linear-gradient(90deg, #CD1415 0%, #E03A0F 100%)
+    color white
+
+  button.btn:disabled,
+  button.btn.disabled,
+  button.btn.active:disabled
+    cursor not-allowed
+    background white
+    color grey-mercury
+    border-color red-milano
+
+  // button.btn.active:disabled
+  //   background linear-gradient(90deg, #CD1415 0%, #E03A0F 100%)
+  //   color white
+  //   opacity 0.5
+
+

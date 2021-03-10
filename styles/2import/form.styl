@@ -1,0 +1,446 @@
+.form.form-authen, .form.form-primary
+  border-radius 8px
+  width 451px
+  margin auto
+  padding 24px 60px
+
+  @media mobile
+    width 100% !important
+    box-shadow none
+    min-width auto
+    padding 0px 24px 24px 24px
+
+  input.form-control
+    &:focus, &:hover
+      box-shadow none
+  
+  input.form-control[readonly]
+    background-color transparent
+
+  .btn-blue
+    height 40px
+    font-style normal
+    font-weight 600
+    font-size 14px
+    line-height normal
+    text-align center
+    text-transform uppercase
+    color #fff
+    background linear-gradient(0deg, #2A8BFF, #44B7FF);
+    border 1px solid white
+
+    &:hover, &:focus, &:active
+      color color-primary
+      border-color color-primary
+      background transparent
+
+    &:disabled
+      color color-primary
+      border-color color-primary
+      background transparent
+  
+  .btn-victor
+    height 40px
+    padding 13px auto
+    font-style normal
+    font-weight 600
+    font-size 16px
+    line-height normal
+    text-align center
+    text-transform uppercase
+    color #fff
+    background #B52126
+    border 1px solid #B52126
+
+    &:hover, &:focus, &:active
+      color color-tamarillo
+      border-color color-tamarillo
+      background transparent
+
+    &:disabled
+      color color-tamarillo
+      border-color color-tamarillo
+      background transparent
+      
+  .btn-2
+    height 40px
+    font-style normal
+    font-weight 600
+    font-size 14px
+    line-height normal
+    text-align center
+    text-transform uppercase
+    color #fff
+    background linear-gradient(90deg, #CD1415 0%, #E03A0F 100%)
+    border 1px solid #CD1415
+
+    &:hover, &:focus, &:active
+      color #CD1415
+      background transparent
+
+    &:disabled
+      color #CD1415
+      background transparent
+
+  .btn-2.btn-success
+    background linear-gradient(90deg, #27AE60 0%, #33CC66 100%)
+    border-color #27AE60
+
+    &:hover, &:focus
+      color #27AE60
+      background transparent
+
+    &:disabled
+      opacity 0.5
+      color #fff
+      background linear-gradient(90deg, #27AE60 0%, #33CC66 100%)
+      border-color #27AE60
+
+  .title-page
+    // font-family 'Sarabun-Regular'
+    font-size: 40px;
+    line-height: 49px;
+    color #000
+    text-align: left
+
+  .color-label
+    font-style normal
+    font-weight 500
+    font-size 15px
+    line-height 1.3
+    text-align center
+    color white
+
+  .color-noted
+    font-size font-size-big
+    color pickled-bluewood
+    font-weight 600
+
+  .color-link
+    font-size font-size-big
+    color red-milano !important
+    font-weight 600
+
+  input.fc1
+    height 40px
+  
+  input.fc1, .fc1 input, textarea.fc1
+    padding 13px 10px
+    border: 1px solid rgba(187, 7, 12, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+  input.fc1::placeholder, .fc1 input::placeholder
+    color grey-gray !important
+  
+  .input-group
+    input
+      border-right none !important
+
+    .input-group-prepend .input-group-text
+      background none
+      border 1px solid rgba(134, 16, 20, 0.4) !important
+      border-left none !important
+      border-top-right-radius 4px
+      border-bottom-right-radius 4px
+
+form.form.form-beo
+  input,
+  .input-group-text
+    border 1px solid rgba(134, 16, 20, 0.2)
+
+  ::placeholder
+    color grey-nepal
+    font-weight 400
+
+  .form-control
+    border-color rgba(134, 16, 20, 0.2)
+    color blue-pickled-bluewood
+
+  .form-control:focus
+    box-shadow none
+    border-color red-milano
+
+  .input-group .input-group-append .input-group-text.transparent,
+  .input-group .input-group-prepend .input-group-text.transparent
+    background-color transparent
+
+  .input-group .input-group-append .form-control
+    text-align-last right
+
+  .input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child)
+    border-right none
+
+  .input-group:focus
+    border-color red-milano
+
+  .input-group input:focus + .input-group-append select,
+  .input-group input:focus + .input-group-append .input-group-text
+    border-color red-milano
+
+  select.strong,
+  strong.input-group-text
+    font-weight bold
+    color #000
+
+  .input-group-append select:focus
+    border-color rgba(134, 16, 20, 0.2)
+
+
+form.form.form-beo
+  .form-group.row
+    margin-bottom 1.3rem
+  @media mobile
+    .form-group.row
+      margin-bottom 1rem
+
+.form.form-primary
+  background-color transparent
+  box-shadow none
+  border-radius none
+  width auto
+  margin 0
+  padding 0
+
+  input.fc1, .fc1 input
+    border 1px solid rgba(134, 16, 20, 0.4) !important
+
+  input.fc1::placeholder, .fc1 input::placeholder
+    color grey-gray !important
+
+  .color-label
+    color pickled-bluewood
+    font-size 14px
+    line-height 24px
+    font-weight 400
+  
+  .input-group .input-group-prepend .input-group-text
+    background none
+    border none
+    box-shadow none
+    border-radius 0
+    color grey-gray
+    border-bottom 1px solid rgba(134, 16, 20, 0.4) !important
+    padding 0 5px
+
+.form.form-second-primary
+  input.fc1, .fc1 input
+    border none !important
+    border-radius 0
+    border-bottom 1px solid rgba(187, 7, 12, 0.4) !important
+    padding 0 10px
+
+  .color-label
+    color grey-gray
+    font-weight 600
+    margin-bottom 0
+  
+  .input-group .input-group-prepend .input-group-text
+    border none !important
+    border-radius 0
+    border-bottom 1px solid rgba(187, 7, 12, 0.4) !important
+  
+.form.form-third-primary
+  input.fc1, .fc1 input
+    border none !important
+    border-radius 0
+    border-bottom 1px solid grey-mercury !important
+    padding 0 10px
+
+  .color-label
+    color grey-gray
+    font-weight 600
+    margin-bottom 0
+  
+  .input-group .input-group-prepend .input-group-text
+    border none !important
+    border-radius 0
+    border-bottom 1px solid grey-mercury !important
+
+.form.form-four-primary
+  .color-label
+    font-size 12px
+    font-weight 400
+
+  input.fc1, .fc1 input
+    border 1px solid white-catskill !important
+    color blue-pickled-bluewood
+
+  .input-group
+    input 
+      border-right 0 !important
+      border-top-right-radius 0
+      border-bottom-right-radius 0
+
+    .input-group-prepend .input-group-text
+      border-color white-catskill !important
+      border-top-right-radius 4px
+      border-bottom-right-radius 4px
+      color blue-pickled-bluewood 
+  
+  .input-group-custom
+    .input-group-left input
+      border-top-right-radius 0
+      border-bottom-right-radius 0
+      border-right 0 !important
+
+    .input-group-right input
+      border-top-left-radius 0
+      border-bottom-left-radius 0
+      border-left 0 !important
+
+  input.fc1.fc1-second, .fc1.fc1-second input
+    border-top 0 !important
+    border-left 0 !important
+    border-right 0 !important
+    border-radius 0px
+
+  input.fc1.medium, .fc1.medium input
+    height 48px
+  
+  input.fc1.small, .fc1.small input
+    height 30px
+    padding 4px 0
+
+.form.form-lms-victoria
+  label
+    color #283E50
+
+  input, textarea, select
+    height calc(1.5em + 0.75rem + 2px)
+    border 1px solid rgba(187, 7, 12, 0.2)
+    box-sizing border-box
+    border-radius 4px
+    resize none
+
+    &::placeholder /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color #8CA0B3
+      opacity 1 /* Firefox */
+
+    &:-ms-input-placeholder /* Internet Explorer 10-11 */
+      color #8CA0B3
+
+    &::-ms-input-placeholder /* Microsoft Edge */
+      color #8CA0B3
+  
+.form.form-drivor-driver
+  label.color-label
+    font-size 13px
+    line-height 16px
+    color #7890AC !important
+  
+  input.fc1, .fc1 input
+    height 43px !important
+  
+  input.fc1.big, .fc1.big input
+    height 64px !important
+
+  input.fc1, .fc1 input, textarea.fc1, select
+    background #EDF4FF !important
+    border 1px solid #8AB9FF !important
+    box-sizing border-box
+    border-radius 6px
+    font-size 13px
+    color black-haiti
+    
+  input.fc1.fc1-plus, .fc1.fc1-plus input, textarea.fc1.fc1-plus, select
+    background white !important
+
+.form-second-primary.form-drivor-driver
+  label
+    color #7890AC !important
+
+  input.fc1, .fc1 input
+    height 43px !important
+
+  input.fc1, .fc1 input, textarea.fc1, select
+    background white !important
+    border 1px solid #E4E4E4 !important
+    box-sizing border-box
+    border-radius 6px
+    font-size 13px
+    color black-haiti
+
+.form-primary.form-tutorica
+  input.fc1.medium, .fc1.medium input,
+  input.fc2.medium, .fc2.medium input
+    height 48px !important
+
+  input.fc1, .fc1 input,
+  input.fc2, .fc2 input
+    height 42px !important
+
+  input.fc1, .fc1 input, textarea.fc1, select.fc1
+    border-radius 6px
+    border-image-source linear-gradient(90deg, #610289 0.01%, #a9148a 52%, #e9006d 100%) !important
+    border-image-slice 1 !important
+    border-width 1px !important
+    font-size 14px
+    color black-emperor
+  
+  input.fc2, .fc2 input, textarea.fc2, select.fc2
+    border 1px solid moon-raker
+    border-radius 4px
+    color black-emperor
+
+  input.fc1, .fc1 input, textarea.fc1, select.fc1,
+  input.fc2, .fc2 input, textarea.fc2, select.fc2
+    &:hover, &:focus, &:active
+      border-color blue-dodger !important
+
+    &.error
+      border-color orange-sunset !important
+
+  .fc1.error, .fc2.error 
+    & > input, textarea, select
+      border-color orange-sunset !important
+  
+  .vue-editor.fc1
+    border-radius 6px
+    border 1px solid gray-dusty !important
+    position relative
+    z-index 0
+
+    &::before
+      content ''
+      background linear-gradient(90deg, #610289 0.01%, #a9148a 52%, #e9006d 100%) !important
+      position absolute
+      left -1px
+      right -1px
+      top -1px
+      bottom -1px
+      z-index -1
+  
+  .vue-editor.fc2
+    border 1px solid moon-raker !important
+    border-radius 4px
+    
+  .vue-editor.fc1,
+  .vue-editor.fc2,
+    &:hover, &:focus, &:active
+      border-color blue-dodger !important
+
+    &.error
+      border-color orange-sunset !important
+
+.form-fan
+  label
+    font-weight 600
+  input::placeholder
+    color #AFAFAF
+    font-style initial !important
+
+
+.form.form-semi-medium
+  .form-group
+    margin-bottom 18px
+
+  .form-group:last-child
+    margin-bottom 0px
+
+.form.form-medium
+  .form-group
+    margin-bottom 22px
+
+  .form-group:last-child
+    margin-bottom 0px

@@ -1,0 +1,27 @@
+html
+  font-size 14px
+  scroll-behavior smooth
+
+body
+  font-size 16px
+  font-family 'SF UI Display'
+  font-weight 400
+  color blue-pickled-bluewood
+
+  @media (max-width: 767px)
+    font-size 14px
+
+body ::-webkit-scrollbar-thumb
+  cursor pointer
+  border-radius 5px
+
+body ::-webkit-scrollbar-track
+  border-radius 0
+
+.scroll-none
+  @media (max-width: 767px)
+    overflow hidden !important
+
+*
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale

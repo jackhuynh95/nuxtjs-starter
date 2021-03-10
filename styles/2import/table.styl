@@ -1,0 +1,217 @@
+.table-beo-red
+  box-shadow 0px 3px 12px rgba(86, 16, 20, 0.18)
+  border-radius 4px
+  color #000
+
+  thead
+    background color-tamarillo
+
+    tr th
+      color white
+
+  tbody
+    background #fff
+
+    tr td.milano a
+      color red-milano
+
+.table-beo-white
+  thead
+    background white
+
+    tr th
+      color pickled-bluewood
+
+  tbody
+    background #fff
+
+    tr td.milano a
+      color red-milano
+
+.table-victoria-white
+  thead
+    tr th
+      color black-tundora
+
+  tbody
+    tr td
+      color black-tundora
+
+    tr td a
+      color blue-dodger
+
+.table-beo-dashboard
+  box-shadow none
+
+  thead th
+    font-weight 600
+
+  thead th:not(.normal)
+    text-transform uppercase
+
+  tbody td
+    padding 14px
+    color pickled-bluewood
+    border-bottom 1px solid rgba(187, 7, 12, 0.3)
+
+    &.name
+      font-weight bold
+
+    &.value
+      font-weight 600
+
+.table-beo-dashboard.table-beo-dashboard-second
+  box-shadow 0px 3px 12px rgba(40, 62, 80, 0.15)
+  border-radius 8px
+  overflow hidden
+
+  thead th
+    padding 14px
+    border-bottom 1px solid rgba(188, 188, 188, 0.5)
+
+  thead th:first-child
+    padding-left 30px
+
+  thead th:last-child
+    padding-right 30px
+
+  tbody tr:last-child td:before
+    display none
+
+  tbody td
+    position relative
+    border 0
+
+    &:before
+      position absolute
+      content ''
+      bottom 0
+      left 0
+      right 0
+      height 1px
+      background rgba(188, 188, 188, 0.5)
+
+  tbody td:first-child
+    padding-left 30px
+
+    &:before
+      left 16px
+
+  tbody td:last-child
+    padding-right 30px
+
+    &:before
+      right 16px
+
+.table.table-header-grey
+  tr th
+    color grey-bali-hai
+    font-size 12px
+    line-height 15px
+    font-weight 400
+
+.table-beo-red.table-beo-red-second
+  thead
+    background red-milano
+
+.table-beo-red.table-bordered
+  th, td
+    border-color rgba(86, 16, 20, 0.15)
+
+.milano a, .milano, .milano a:hover, .milano:hover
+  color red-milano
+
+.table-beo-detail
+  margin-bottom 0
+
+  td
+    border-color rgba(86, 16, 20, 0.15)
+
+  th, td
+    padding 16px !important
+
+  tr td:first-child
+    font-weight 600
+    color #283E50
+    width 230px
+    min-width 230px
+    max-width 230px
+    word-break break-all
+
+// .table
+// td
+// word-break break-all
+@media only screen and (max-width: 767px)
+  .table-beo-detail.table tr td:first-child
+    padding-bottom 5px !important
+
+  .table-beo-detail.table tr td:nth-child(2)
+    padding-top 0px !important
+    -webkit-box-shadow 0 5px 6px -6px rgba(86, 16, 20, 0.18)
+
+  -moz-box-shadow 0 5px 6px -6px rgba(86, 16, 20, 0.18)
+    box-shadow 0 5px 6px -6px rgba(86, 16, 20, 0.18)
+
+  .table-beo-detail.table>tbody>tr>td, .table-beo-detail.table>tbody>tr>th, .table-beo-detail.table>tfoot>tr>td, .table-beo-detail.table>tfoot>tr>th, .table-beo-detail.table>thead>tr>td, .table-beo-detail.table>thead>tr>th
+    display block
+    min-width 100% !important
+    border-top 0px
+
+  .table-beo-detail.table>thead>tr>th
+    display none
+
+  .table-beo-detail.table .filterBody span
+    display block
+
+  .table-bordered-radius-wrapper
+    overflow auto
+
+table.table.table-bordered.table-bordered-radius tr:last-child td:first-child
+  border-bottom-left-radius 4px
+
+table.table.table-bordered.table-bordered-radius tr:last-child td:last-child
+  border-bottom-right-radius 4px
+
+.table-bordered-radius-wrapper
+  // overflow auto
+  border-radius 6px
+
+  .table td, .table th
+    white-space nowrap
+
+  table.table.table-bordered.table-bordered-radius
+    border-radius inherit
+    overflow hidden
+    margin-bottom 0
+
+    tbody
+      background-color white
+
+table tr td
+  word-break break-all
+
+.table-responsive-child
+  min-width max-content
+
+  thead
+    tr th
+      @media noExtraLargeComputer
+        min-width 150px
+
+      @media mobile
+        min-width auto
+        width 150px
+
+.table-fix-head
+  overflow-y auto
+
+.table-fix-head.half-part
+  max-height 270px
+
+.table-fix-head.full-part
+  max-height calc(2 * 270px)
+
+.table-fix-head thead th
+  background-color white
+  position sticky
+  top 0

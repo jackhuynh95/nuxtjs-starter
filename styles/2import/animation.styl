@@ -1,0 +1,214 @@
+.rotating
+  animation button-spin 2s linear infinite
+
+.process.rounding.small
+  width 20px
+  height 20px
+
+.process.rounding
+  background none
+  margin 0 auto
+  box-shadow none
+  position relative
+  border-radius 50%
+  overflow hidden
+
+.process.rounding:after
+  content ''
+  width 100%
+  height 100%
+  border-radius 50%
+  border 12px solid #fff
+  position absolute
+  top 0
+  left 0
+
+.process.rounding > span
+  width 50%
+  height 100%
+  overflow hidden
+  position absolute
+  top 0
+  z-index 1
+
+.process.rounding .process-left
+  left 0
+
+.process.rounding .process-bar
+  width 100%
+  height 100%
+  background none
+  position absolute
+  top 0
+
+.process.rounding .process-left .process-bar
+  left 100%
+  -webkit-transform-origin center left
+  transform-origin center left
+
+.process.rounding .process-right
+  right 0
+
+.process.rounding .process-right .process-bar
+  left -100%
+  -webkit-transform-origin center right
+  transform-origin center right
+  animation rotate-right 1.8s infinite linear
+
+.process.rounding.green .process-bar
+  border-color mountain-meadow
+  background mountain-meadow
+
+.process.rounding .process-left .process-bar
+  animation rotate-left 1.8s infinite linear
+
+.animated.bursting
+  animation animation-burst 2s linear infinite
+
+/* rotate-right */
+@keyframes rotate-right
+  0%
+    transform rotate(0deg)
+
+  50%
+    transform rotate(180deg)
+
+  100%
+    transform rotate(180deg)
+
+/* rotate-left */
+@keyframes rotate-left
+  0%
+    transform rotate(0deg)
+
+  50%
+    transform rotate(0deg)
+
+  100%
+    transform rotate(180deg)
+
+/* rotate-left */
+@keyframes animation-burst
+  0%
+    width 10%
+    height 10%
+
+  50%
+    width 50%
+    height 50%
+
+  100%
+    width 100%
+    height 100%
+
+// dot pulse
+.pulse 
+  border-radius 50%
+  
+  &:before,
+  &:after 
+    content ""
+    position absolute
+    box-sizing border-box
+    width 100%
+    height 100%
+    border 1px solid transparent 
+    border-radius 50%
+  
+  
+  &:before 
+    animation blip1 1s infinite cubic-bezier(0, .6, 1, .6)
+  
+  
+  &:after 
+    animation blip2 1s infinite linear
+  
+
+@keyframes blip1 
+  to 
+    transform scale(3)
+    opacity 0
+ 
+
+@keyframes blip2 
+  to
+    transform scale(2)
+    opacity 0
+
+/**
+ * ==============================================
+ * Dot Pulse
+ * ==============================================
+ */
+.dot-pulse, .dot-pulse1
+  position relative
+  left -9999px
+  width 10px
+  height 10px
+  border-radius 5px
+  background-color #E79799
+  color #E79799
+  box-shadow 9999px 0 0 -5px #E79799
+  animation dotPulse 1.7s infinite linear
+
+.dot-pulse::before, .dot-pulse1::before
+  box-shadow 9984px 0 0 -5px #E79799
+  animation dotPulseBefore 1.7s infinite linear
+
+.dot-pulse::before, .dot-pulse::after, .dot-pulse1::before, .dot-pulse1::after
+  content ''
+  display inline-block
+  position absolute
+  top 0
+  width 10px
+  height 10px
+  border-radius 5px
+  background-color #E79799
+  color #E79799
+
+.dot-pulse::after
+  box-shadow 10014px 0 0 -5px #E79799
+  animation dotPulseAfter 1.7s infinite linear
+  animation-delay 0.5s
+
+.dot-pulse
+  animation-delay 0.25s
+
+.dot-pulse1
+  animation-delay 1s
+
+.dot-pulse::before
+  animation-delay 0s
+
+.dot-pulse1::before
+  animation-delay 0.75s
+
+@keyframes dotPulseBefore
+  0%
+    box-shadow 9984px 0 0 -5px #E79799
+
+  30%
+    box-shadow 9984px 0 0 2px #E79799
+
+  60%, 100%
+    box-shadow 9984px 0 0 -5px #E79799
+
+@keyframes dotPulse
+  0%
+    box-shadow 9999px 0 0 -5px #E79799
+
+  30%
+    box-shadow 9999px 0 0 2px #E79799
+
+  60%, 100%
+    box-shadow 9999px 0 0 -5px #E79799
+
+@keyframes dotPulseAfter
+  0%
+    box-shadow 10014px 0 0 -5px #E79799
+
+  30%
+    box-shadow 10014px 0 0 2px #E79799
+
+  60%, 100%
+    box-shadow 10014px 0 0 -5px #E79799  

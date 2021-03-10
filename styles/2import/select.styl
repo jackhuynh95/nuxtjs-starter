@@ -1,0 +1,118 @@
+.el-select.el-select-input
+  .el-input__suffix .el-select__caret
+    font-size 16px
+    font-weight 600
+
+.el-select.el-select-input.el-input-icon-fixed
+  .el-input__icon
+    display flex
+    align-items center
+    justify-content center
+
+.el-select-dropdown.select-beautiful
+  margin-top 5px !important
+  border 0
+  border-radius 4px
+  overflow hidden
+
+  .el-select-dropdown__list
+    padding 0px
+
+  .el-select-dropdown__item
+    padding 4px 10px
+    min-height 41px
+    height auto
+    line-height 24px
+    border-bottom 0
+    color nile-blue
+    font-size 16px
+    display flex
+    flex-direction column
+    justify-content center
+    font-weight 400
+    white-space normal
+
+    &.selected
+      font-weight 400
+      color white
+      background color-primary !important
+
+    &:last-child
+      border-bottom 0px
+
+  .popper__arrow
+    display none
+
+.el-select.select-input-beautiful
+  .el-input.is-disabled.is-disabled .el-input__inner
+    background-color white
+    color #606266
+  
+  .el-input__suffix 
+    display flex
+    align-items center
+
+.el-select.select-input-beautiful.select-input-multi
+  .el-select__input
+    margin-right 0
+    display none
+
+  // .el-select__tags
+  //   display flex
+  //   max-width none !important
+  //   width max-content !important
+
+  .el-select__tags > span
+    display flex
+    flex-flow wrap
+  
+  .el-select__tags .el-tag.el-tag--info
+    display none
+
+    .el-select__tags-text
+      max-width 80px
+      white-space nowrap !important
+      overflow hidden
+      text-overflow ellipsis
+      display block
+    
+    .el-tag__close
+      transform translateY(1px)
+
+  .el-select__tags .el-tag.el-tag--info:first-child,
+  .el-select__tags .el-tag.el-tag--info:last-child
+    display flex
+    align-items center
+
+.el-select.el-select-input.select-input-beautiful
+  border 1px solid blue-pattens
+  border-radius 4px
+  overflow hidden
+
+  .el-input__inner
+    border 0
+
+  .el-input__suffix
+    width 40px
+    right 0
+    background-color #D7E7FE
+
+  .el-input__suffix .el-input__icon
+    color #3685FC
+
+.el-select.select-input-beautiful.select-input-small
+  .el-input__inner
+    height 30px
+
+
+
+.noselect
+  -webkit-touch-callout none /* iOS Safari */
+  -webkit-user-select none /* Safari */
+  -khtml-user-select none /* Konqueror HTML */
+  -moz-user-select none /* Old versions of Firefox */
+  -ms-user-select none /* Internet Explorer/Edge */
+  user-select none   /* Non-prefixed version, currently
+  supported by Chrome, Opera and Firefox */
+
+

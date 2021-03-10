@@ -1,0 +1,32 @@
+.main-navbar
+  &.navbar-light .navbar-toggler
+    border-color transparent
+    &:focus
+      outline none
+  .nav-item
+    @media(min-width 992px)
+      padding-left 1rem
+      padding-right @padding-left
+    @media(min-width 1200px)
+      padding-left 1.5rem
+      padding-right @padding-left
+    
+    // &:last-child
+    //   padding-right 0
+  .nav-item a.nav-link
+    font-size 14px
+    font-weight 600
+    color #fff
+
+    &:hover
+      color red-mexican
+  
+    &.active
+      color red-mexican
+
+    @media(min-width 992px)
+      padding-left 0
+      padding-right @padding-left
+
+  // .nav-item.btn-danger:not(:hover) a.nav-link
+  //   color white

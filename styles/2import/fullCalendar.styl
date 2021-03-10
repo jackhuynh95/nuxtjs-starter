@@ -1,0 +1,104 @@
+cellHeight = 95px
+tableHeight = 408px
+mainColor = white-catskill
+textColor = blue-pickled-bluewood
+textGreyColor = grey-nepal
+textBlueColor = nile-blue
+
+.full-calendar-beautiful
+  .fc-view-container
+    border-radius 8px
+    overflow hidden
+
+  .fc-scroller.fc-day-grid-container
+    max-height tableHeight
+    height auto !important
+
+  .fc-toolbar
+    display none
+    // .fc-left
+
+    // .fc-right
+
+    // .fc-center > h2
+    //   font-weight bold
+    //   font-size 20px
+    //   color textColor
+
+  .fc-head 
+    background-color mainColor
+  
+    .fc-day-header
+      height 35px
+      border none
+      vertical-align middle
+      font-weight 600
+      font-size 12px
+      line-height 16px
+      text-align center
+      text-transform uppercase
+      color textColor
+    
+    // .fc-day-header:first-day
+    //   border-radius
+    // .fc-day-header:last-day
+
+  .fc-body 
+    .fc-widget-content
+      border-color mainColor
+
+    .fc-row.fc-week
+      height cellHeight !important
+
+    .fc-day-top
+      padding 8px 16px 0 0
+
+    .fc-day-top > .fc-day-number
+      color textBlueColor
+
+    .fc-day-top.fc-other-month > .fc-day-number
+      color textGreyColor
+
+    .fc-day
+      border-color mainColor
+
+      &.fc-today
+        background transparent
+    
+    .fc-day.fc-widget-content.event-date
+      position relative
+
+      &::before
+        content ''
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        background-color transparent
+        width 5px
+
+    .fc-day.fc-widget-content
+      &.event-date.event-date-style-1
+        background-color pippin-pink
+
+        &::before
+          background-color brink-pink
+      
+      &.event-date.event-date-style-2
+        background-color yellow-serenade
+
+        &::before
+          background-color texas-rose
+
+      &.event-date.event-date-style-3
+        background-color titan-white
+
+        &::before
+          background-color purple-malibu
+      
+      &.event-date.event-date-style-4
+        background-color granny-apple
+
+        &::before
+          background-color green-shamrock
+        

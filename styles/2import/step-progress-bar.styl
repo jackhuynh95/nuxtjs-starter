@@ -1,0 +1,80 @@
+// Steps Progress Step Bar
+.progress-step-bar
+  display flex
+  list-style none
+  text-align center
+  counter-reset milestones // init counter
+  // design
+  width steps-width
+  margin 0
+  padding 0
+
+  .step
+    flex-grow 1
+    flex-basis 0
+    margin 0
+    padding 0
+    position relative
+    z-index 0
+
+  .step
+    display block
+    text-decoration none
+
+  .circle
+    position absolute
+    top 5px
+    left 50%
+    transform translate(-50%, -50%)
+    width 6px
+    height 6px
+    background-color red-milano
+    border-radius 50%
+
+  .step::before, .step::after
+    display block
+    font-size counter-font-size
+    box-sizing border-box
+
+  // border
+  .step::before
+    border-radius 50%
+    text-decoration none
+    // design
+    width circle-border-width
+    height circle-border-width
+    line-height circle-border-width
+    margin 0 auto 0.5em
+
+  // connecting line
+  .step::after
+    content ''
+    position absolute
+    z-index -1
+    width 100%
+    height 0
+    border 0
+    // design
+    left 50%
+    top 'calc(%s / 2)' % (circle-diameter)
+    border-bottom-width line-width
+    // margin-top 'calc(- %s / 2)' % (line-width)
+
+  // don't show for last element
+  .step:last-child::after
+    display none
+
+  // Colors
+  .step, .step:visited
+    color #9ca09f
+
+  // finished milestone - default
+  .step::before
+    content ''
+    color #fdfefe
+    border 1px solid red-milano
+    background white
+
+  .step::after
+    border-bottom-style solid
+    border-color red-milano

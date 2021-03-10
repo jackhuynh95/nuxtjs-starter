@@ -1,0 +1,95 @@
+.date-picker-popup-custom
+  background #FFFFFF
+  box-shadow 0px 4px 9px rgba(51, 95, 226, 0.4)
+  border-radius 8px
+  // width 312px !important
+  // height auto !important
+
+  .el-date-picker__header
+    margin-bottom 0px
+
+    .el-date-picker__header-label
+      font-size 18px
+      font-weight bold
+      color blue-nile
+    
+    button
+      margin-top 5px
+
+      &::before
+        color grey-nepal
+        font-weight bold
+        font-size 16px
+
+  .el-picker-panel__footer
+    display none
+
+  .el-picker-panel__content 
+    margin auto
+    
+    .el-date-table 
+      font-size 14px
+
+      tbody th
+        color grey-nepal
+        border none
+
+    .el-date-table__row 
+      > td
+        padding 1px
+
+      .prev-month
+        color grey-nepal
+
+      .available
+        color blue-nile
+
+        &:hover
+          color alizarin-crimson
+      
+      .current, .selected
+        > div
+          width 30px
+          height 30px
+          padding 0
+          margin auto
+
+        span
+          color white !important
+          background alizarin-crimson
+          border-radius 4px
+          height 30px
+          width 30px
+          display flex
+          align-items center
+          justify-content center
+
+      .today
+        span
+          color alizarin-crimson
+
+      // .next-month
+      //   display none
+
+  .popper__arrow
+    display none !important
+
+.date-picker-popup-custom.date-picker-popup-show
+  display block
+
+.date-picker-popup-custom.date-picker-popup-hide
+  display none
+
+.date-picker-popup-custom
+  @media mobile
+    width auto !important
+
+.select-time.select-time-beautiful
+  .el-input__inner
+    padding-left 0
+    border-radius 0
+    border none
+    border-bottom 1px solid gray-dusty
+    font-size 16px
+    font-weight 600
+  

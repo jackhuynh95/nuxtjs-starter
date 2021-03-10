@@ -1,0 +1,63 @@
+radio-color-active = blue-pickled-bluewood
+radio-color-border = grey-mercury
+
+.el-radio.el-radio-beautiful
+  display flex
+  align-items center
+
+  .el-radio__input .el-radio__inner
+    border-color radio-color-border
+    border-width 2px
+    width 20px !important
+    height 20px !important
+
+    &::after
+      width 10px
+      height 10px
+      left 50%
+      top 50%
+      transform translate(-50%, -50%)
+
+  .el-radio__label
+    padding 0 12px 0 12px
+    font-size 16px
+    color blue-pickled-bluewood
+
+  &.is-checked
+    .el-radio__input .el-radio__inner
+      background-color transparent
+
+    .el-radio__input .el-radio__inner:after
+      background linear-gradient(90deg, #610289 0.01%, #A9148A 52%, #E9006D 100%)
+
+    .el-radio__label
+      color radio-color-active
+
+  &.is-checked.is-bordered
+    border-color radio-color-active
+  
+.el-radio.el-radio-beautiful.el-radio-second-beautiful
+  flex-direction row-reverse
+  
+.el-radio.el-radio-group.el-radio-beautiful
+  display flex
+  align-items center
+
+  .el-radio__input 
+    display flex
+    align-items center
+
+.el-radio.hide-label
+  .el-radio__label
+    display none
+
+
+.el-radio.profile-sex.is-checked
+  .el-radio__inner 
+    border-color #554BB9
+    background #554BB9
+.el-radio.profile-sex
+  .el-radio__label
+    color #283E50
+.el-radio__label
+  font-size 16px

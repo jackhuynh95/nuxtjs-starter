@@ -1,0 +1,55 @@
+checkbox-color-background = white
+checkbox-color-border = gray-dusty
+checkbox-color-label = black-emperor
+checkbox-color-ticked = color-secondary
+checkbox-second-color-background = color-secondary
+checkbox-second-color-border = color-secondary
+checkbox-second-color-ticked = white
+
+.el-checkbox.el-checkbox-beautiful
+  display flex
+  align-items center
+
+  .el-checkbox__input .el-checkbox__inner
+    background-color checkbox-color-background
+    border-color checkbox-color-border
+    border-radius 4px
+    width 18px !important
+    height 18px !important
+
+    &::after
+      border-width 2px
+      width 4px
+      height 9px
+      left 5px
+      border-color checkbox-color-ticked
+
+  .el-checkbox__label
+    font-size 12px
+    padding-left 8px
+    font-weight 400
+    color checkbox-color-label
+    white-space pre-line
+
+.el-checkbox.el-checkbox-second-beautiful
+  display flex
+  align-items center
+
+  .el-checkbox__input .el-checkbox__inner
+    border-radius 4px
+    width 18px !important
+    height 18px !important
+
+    &::after
+      border-width 2px
+      width 4px
+      height 9px
+      left 5px
+      border-color checkbox-second-color-ticked
+
+  .el-checkbox__input .el-checkbox__inner:hover
+    border-color checkbox-second-color-border
+  
+  .el-checkbox__input.is-checked .el-checkbox__inner
+    background-color checkbox-second-color-background
+    border-color checkbox-second-color-border

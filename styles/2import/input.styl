@@ -1,0 +1,102 @@
+input
+  font-family 'SF UI Display'
+
+  &::placeholder
+    color grey-nobel
+    font-style italic
+    font-family 'Sarabun'
+    font-size 16px
+    font-weight 400
+  
+  &:focus
+    outline none
+
+input.input-primary
+  border 1px solid rgba(134, 16, 20, 0.4)
+
+  &::placeholder
+    color bermuda-gray
+
+  &:focus
+    outline none
+
+input.placeholder-center
+  &::placeholder
+    text-align center
+
+.input-group-custom 
+  .input-group-prepend
+    z-index 10
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    border none
+    padding 0 10px
+
+  .input-group-append
+    z-index 10
+    position absolute
+    top 0
+    bottom 0
+    right 0
+    padding 0 10px
+
+.input-group.input-group--rounded
+  > .form-control:not(:first-child)
+    border-radius 10px
+
+  > .input-group-prepend > .input-group-text
+    border-top-left-radius 10px
+    border-bottom-left-radius 10px
+
+  > .input-group-append > .input-group-text
+    border-top-right-radius 10px
+    border-bottom-right-radius 10px
+
+  > .no-rounded-right
+    border-top-right-radius 0px !important
+    border-bottom-right-radius 0px !important
+
+textarea.textarea-primary
+  max-height 106px !important
+  overflow-y auto
+  font-family 'SF UI Display'
+  border 1px solid grey-gallery
+  
+  &::placeholder
+    color grey-nobel
+    font-style italic
+    font-family 'Sarabun'
+    font-size 16px
+    font-weight 400
+
+  &:focus
+    outline none
+
+
+.input-fan, .birthdate input, .input-fan input
+  border-image-source linear-gradient(90deg, #610289 0.01%, #A9148A 52%, #E9006D 100%);
+  border-width 1px
+  border-image-slice 1
+  border-radius 4px !important
+  padding 8px 16px !important
+  width 100%
+  &:focus
+    outline none
+  &.input-url
+    padding 8px 66px
+
+.el-autocomplete.input-fan
+  padding 0 !important
+
+.el-input__inner, .el-range-input
+  font-size 16px
+  color #283E50
+  &::placeholder
+    color #AFAFAF !important
+    font-style normal
+
+
+
+      
