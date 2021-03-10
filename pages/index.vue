@@ -22,7 +22,8 @@ div
 <script>
   import Vue from 'vue';
   import Component from 'nuxt-class-component';
-  import { mixins, State } from 'nuxt-property-decorator';
+  import { mixins } from 'nuxt-property-decorator';
+  import { State } from 'vuex-class';
   import FormMixin from '@/mixins/form';
   
   @Component({})
@@ -34,6 +35,8 @@ div
     profile;
 
     mounted() {
+      console.log(process.env.NODE_ENV);
+      console.log(process.env.VUE_APP_BASE_DOMAIN_URL);
       setTimeout(() => {
         this.$store.dispatch('account/resetProfile');
       }, 500);

@@ -1,7 +1,10 @@
 import viLang from './i18n/vi';
 import enLang from './i18n/en';
+import devEnv from './env/development';
+import prodEnv from './env/production';
 
 export default {
+  env: process.env.NODE_ENV == "development" ? devEnv : prodEnv,
   server: {
     port: 8080, // default: 3000
   },
