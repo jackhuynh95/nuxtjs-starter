@@ -1,6 +1,5 @@
 import { mapValues, compact, keys, values } from 'lodash';
 import { Component, Vue } from 'vue-property-decorator';
-
 @Component
 export default class FormMixin extends Vue {
   isAutoFill = false;
