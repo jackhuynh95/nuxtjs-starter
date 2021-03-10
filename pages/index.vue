@@ -2,7 +2,8 @@
   div
     h1 {{ ip }}
     div(v-t='"header_menu.sign_in"')
-    NuxtLink(to='/item/123') DETAIL
+    NuxtLink(:to='localePath("/", "en")') English
+    NuxtLink(:to='localePath("/", "vi")') Viet Nam
     form(@submit.prevent='')
       input(v-model='text' name='text' v-validate='"required"')
       small.form-text.text-danger {{ veeErrors.first("text") }}

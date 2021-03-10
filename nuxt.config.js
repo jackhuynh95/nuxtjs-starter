@@ -1,4 +1,5 @@
 import viLang from './i18n/vi';
+import enLang from './i18n/en';
 
 export default {
   server: {
@@ -69,6 +70,7 @@ export default {
       fallbackLocale: 'vi',
       messages: {
         vi: viLang,
+        en: enLang,
       }
     }
   }
