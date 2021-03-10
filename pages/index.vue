@@ -27,7 +27,9 @@ div
   import { State } from 'vuex-class';
   import FormMixin from '@/mixins/form';
   
-  @Component({})
+  @Component({
+    layout: 'central',
+  })
   export default class Home extends mixins(FormMixin) {
     isLoading = false;
     text = '';
