@@ -43,7 +43,6 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxt/http',
     'nuxt-element-ui',
-    'nuxt-validate',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
