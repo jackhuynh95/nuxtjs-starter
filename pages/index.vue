@@ -1,6 +1,7 @@
 <template lang="pug">
   div
     h1 {{ ip }}
+    div {{ profile }}
     .text-oswald(v-t='"header_menu.sign_in"')
     NuxtLink(:to='localePath("/", "en")') English
     NuxtLink(:to='localePath("/", "vi")') Viet Nam
@@ -21,7 +22,7 @@ div
 <script>
   import Vue from 'vue';
   import Component from 'nuxt-class-component';
-  import { mixins } from 'nuxt-property-decorator';
+  import { mixins, State } from 'nuxt-property-decorator';
   import FormMixin from '@/mixins/form';
   
   @Component({})
@@ -29,7 +30,14 @@ div
     isLoading = false;
     text = '';
 
-    mounted() {}
+    @State(state => state.account.profile)
+    profile;
+
+    mounted() {
+      setTimeout(() => {
+        this.$store.dispatch('account/resetProfile');
+      }, 500);
+    }
 
     async asyncData ({ params, $http }) {
       const ip = await $http.$get('https://icanhazip.com');
