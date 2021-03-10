@@ -2,6 +2,7 @@
   div
     h1 {{ ip }}
     div {{ profile }}
+    div {{ 9000 | numberWithComma }}
     .text-oswald(v-t='"header_menu.sign_in"')
     NuxtLink(:to='localePath("/", "en")') English
     NuxtLink(:to='localePath("/", "vi")') Viet Nam

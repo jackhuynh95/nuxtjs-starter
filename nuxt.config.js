@@ -32,7 +32,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~plugins/veeValidate.ts'
+    '~plugins/veeValidate.ts',
+    '~plugins/filters.ts',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
