@@ -1,9 +1,6 @@
 <template lang="pug">
   div
     h1 {{ ip }}
-    //- el-select(v-model='ip')
-    //-   el-option(value='' label='1')
-    //-   el-option(value='2' label='2')
     NuxtLink(to='/item/123') DETAIL
 
 </template>
