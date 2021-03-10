@@ -52,6 +52,7 @@ export default {
     '@nuxt/http',
     'nuxt-element-ui',
     'nuxt-i18n',
+    'nuxt-clipboard2',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -64,7 +65,7 @@ export default {
   },
 
   elementUI: {
-    components: ['Select', 'Option'],
+    components: ['Select', 'Option', 'Tooltip'],
     locale: 'en',
   },
 
