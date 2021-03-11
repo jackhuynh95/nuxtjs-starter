@@ -13,15 +13,15 @@ div
 </style>
 
 <script>
-  import Vue from 'vue';
-  import Component from 'nuxt-class-component';
-  import Login from '@/components/pages/login/LoginPage.vue';
-  
-  @Component({
-    layout: 'central',
-    components: {
-      Login,
-    }
-  })
-  export default class Home extends Vue {}
+import Vue from 'vue';
+import Component from 'nuxt-class-component';
+import Login from '@/components/pages/login/LoginPage.vue';
+
+@Component({
+  layout: 'authen',
+  components: {
+    Login,
+  }
+})
+export default class Home extends Vue {}
 </script>

@@ -1,17 +1,18 @@
 <template lang="pug">
-  div
-    div Central
-    nuxt(v-if='!hasChild')
-    slot
+  CentralLayout(:hasChild='hasChild')
     
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Component from "nuxt-class-component";
+import CentralLayout from '@/components/layouts/centralLayout/CentralLayout.vue';
 import _ from 'lodash';
 
 @Component({
+  components: {
+    CentralLayout,
+  },
   props: {
     hasChild: {
       type: Boolean,
@@ -19,5 +20,5 @@ import _ from 'lodash';
     },
   },
 })
-export default class CentralLayout extends Vue {}
+export default class Central extends Vue {}
 </script>

@@ -21,40 +21,40 @@ div
 </style>
 
 <script>
-  import Vue from 'vue';
-  import Component from 'nuxt-class-component';
-  import { mixins } from 'nuxt-property-decorator';
-  import { State } from 'vuex-class';
-  import FormMixin from '@/mixins/form';
-  
-  @Component({
-    layout: 'empty',
-  })
-  export default class Home extends mixins(FormMixin) {
-    isLoading = false;
-    text = '';
+import Vue from 'vue';
+import Component from 'nuxt-class-component';
+import { mixins } from 'nuxt-property-decorator';
+import { State } from 'vuex-class';
+import FormMixin from '@/mixins/form';
 
-    @State(state => state.account.profile)
-    profile;
+@Component({
+  layout: 'central',
+})
+export default class Home extends mixins(FormMixin) {
+  isLoading = false;
+  text = '';
 
-    mounted() {
-      console.log(process.env.NODE_ENV);
-      console.log(process.env.VUE_APP_BASE_DOMAIN_URL);
-      setTimeout(() => {
-        this.$store.dispatch('account/resetProfile');
-      }, 500);
-    }
+  @State(state => state.account.profile)
+  profile;
 
-    async asyncData ({ params, $http }) {
-      const ip = await $http.$get('https://icanhazip.com');
-      // text = ip;
-      return { ip };
-    }
-
-    head() {
-      return { 
-        title: this.ip,
-      };
-    }
+  mounted() {
+    console.log(process.env.NODE_ENV);
+    console.log(process.env.VUE_APP_BASE_DOMAIN_URL);
+    setTimeout(() => {
+      this.$store.dispatch('account/resetProfile');
+    }, 500);
   }
+
+  async asyncData ({ params, $http }) {
+    const ip = await $http.$get('https://icanhazip.com');
+    // text = ip;
+    return { ip };
+  }
+
+  head() {
+    return { 
+      title: this.ip,
+    };
+  }
+}
 </script>

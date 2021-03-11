@@ -13,15 +13,15 @@ div
 </style>
 
 <script>
-  import Vue from 'vue';
-  import Component from 'nuxt-class-component';
-  import Signup from '@/components/pages/signup/SignupPage.vue';
-  
-  @Component({
-    layout: 'central',
-    components: {
-      Signup,
-    }
-  })
-  export default class SignupPage extends Vue {}
+import Vue from 'vue';
+import Component from 'nuxt-class-component';
+import Signup from '@/components/pages/signup/SignupPage.vue';
+
+@Component({
+  layout: 'central',
+  components: {
+    Signup,
+  }
+})
+export default class SignupPage extends Vue {}
 </script>
