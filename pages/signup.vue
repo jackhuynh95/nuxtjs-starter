@@ -18,7 +18,7 @@ import Component from 'nuxt-class-component';
 import Signup from '@/components/pages/signup/SignupPage.vue';
 
 @Component({
-  layout: 'central',
+  layout: 'authen',
   components: {
     Signup,
   }
