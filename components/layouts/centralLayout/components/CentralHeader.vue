@@ -13,19 +13,20 @@
               b-nav-item.text-uppercase.text-medium(:to='{ path: "/login" }' linkActiveClass='active' exact @click='toggleBgOverlay')
                 span(v-t='"header_menu.sign_in"') Đăng nhập
                 
-              //- li.nav-item.has-child.beutiful-border.icon-focus.language.pr-0(v-class-on-click='{ class: ["active"] }')
-              //-   div.parentsdiv.parents.d-md-none.d-block
-              //-     | {{ activeLang }}
-              //-   div.parentsdiv.parents.d-md-flex.align-items-center.d-none
-              //-     div.ion-fl.mr-2(:class = '$i18n.locale')
-              //-     .text.text-uppercase {{ activeLang }}
-              //-     .icon.d-flex.ml-2
-              //-       img.unfocus.m-auto(src='~@/components/layouts/centralLayout/assets/sort-down.svg' alt='IMG')
-              //-       img.focus.m-auto(src='~@/components/layouts/centralLayout/assets/sort-down-red.svg' alt='IMG')
-              //-   ul.sub-menu.list-unstyled
-              //-     li.nav-item.icon-br.locale(v-for='(item, idx) in languages' :class='item.locale.toLowerCase()' @click='toggleBgOverlay')
-              //-       a.nav-link(href="javascript:;" :title="item.label" @click.prevent.stop='switchLocalePath(item.locale)') 
-              //-         | {{ item.label }}
+              li.nav-item.has-child.beutiful-border.icon-focus.language.pr-0
+                div.parentsdiv.parents.d-md-none.d-block
+                  | {{ activeLang }}
+                div.parentsdiv.parents.d-md-flex.align-items-center.d-none
+                  div.ion-fl.mr-2(:class = '$i18n.locale')
+                  .text.text-uppercase {{ activeLang }}
+                  .icon.d-flex.ml-2
+                    img.unfocus.m-auto(src='~@/components/layouts/centralLayout/assets/sort-down.svg' alt='IMG')
+                    img.focus.m-auto(src='~@/components/layouts/centralLayout/assets/sort-down-red.svg' alt='IMG')
+
+                ul.sub-menu.list-unstyled
+                  li.nav-item.icon-br.locale(v-for='(item, idx) in languages' :class='item.locale.toLowerCase()' @click='toggleBgOverlay')
+                    a.nav-link(href="javascript:;" :title="item.label" @click.prevent.stop='selectLang(item)') 
+                      | {{ item.label }}
 
           .bg-overlay(:class='{ active: showMenu && isMobile }' @click='toggleBgOverlay')  
     
@@ -504,11 +505,12 @@ icon_vi = '~@/components/layouts/centralLayout/assets/vi.svg'
 import Vue from 'vue';
 import Component from 'nuxt-class-component';
 import { mixins } from 'nuxt-property-decorator';
+import LangSelection from '@/mixins/langSelection';
 
 @Component({
   components: {},
 })
-export default class CentralHeader extends Vue {
+export default class CentralHeader extends mixins(LangSelection) {
   title: string;
   showMenu = false;  
   isTop = false;
