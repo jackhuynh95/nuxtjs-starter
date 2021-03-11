@@ -32,9 +32,10 @@ export default {
   plugins: [
     '~plugins/veeValidate.ts',
     '~plugins/filters.ts',
+    '~plugins/router.ts',
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
+  // Auto i port components: https://go.nuxtjs.dev/config-components
   components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -83,6 +84,7 @@ export default {
         ["@babel/plugin-proposal-decorators", { "legacy": true }]
       ]
     },
+    vendor: ['aframe'],
   },
 
   elementUI: {
