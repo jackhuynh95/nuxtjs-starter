@@ -1,5 +1,23 @@
+// Place your settings in this file to overwrite default and user settings.
 {
-    "i18n-ally.localesPaths": [
-        "i18n"
-    ]
-}
+    "editor.tabSize": 2,
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "src/libs/semantic/src/**": true,
+      "src/libs/semantic/task/**": true,
+      "prettier.disableLanguages": ["vue"],
+    },
+    "stylusSupremacy.insertColons": false,
+    "stylusSupremacy.insertSemicolons": false,
+    "stylusSupremacy.insertBraces": false,
+    "files.exclude": {
+      "src/libs/semantic/**": true,
+    },
+    "i18n-ally.enabledParsers": [
+      "js"
+    ],
+    "i18n-ally.localesPaths": "i18n",
+    "i18n-ally.keystyle": "nested",
+    "i18n-ally.sourceLanguage": "en",
+  }
