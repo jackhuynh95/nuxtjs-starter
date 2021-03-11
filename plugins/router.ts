@@ -15,6 +15,7 @@ export default ({ app }) => {
   updateTitlePage();
 }
 
+
 function guardNagivation() {
   router.beforeEach((to, from, next) => {
     initStorePromise
@@ -37,8 +38,6 @@ function guardNagivation() {
 
         p.then(() => {
           if (!store.state.account.profile) {
-            const requires: any = accountStorage.getRequires();
-
             next({ name: 'login', query: { redirect_from: to.name } });
             return null;
           }
