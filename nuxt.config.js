@@ -65,6 +65,7 @@ export default {
         lazy: true,
         langDir: 'i18n/',
         defaultLocale: 'vi',
+        seo: false,
         detectBrowserLanguage: {
           useCookie: true,
           cookieKey: 'language',

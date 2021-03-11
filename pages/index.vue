@@ -26,6 +26,7 @@ import Component from 'nuxt-class-component';
 import { mixins } from 'nuxt-property-decorator';
 import { State } from 'vuex-class';
 import FormMixin from '@/mixins/form';
+import AccountApis from '@/apis/account';
 
 @Component({
   layout: 'central',
@@ -49,6 +50,8 @@ export default class Home extends mixins(FormMixin) {
     setTimeout(() => {
       this.$store.dispatch('account/resetProfile');
     }, 500);
+
+    AccountApis.getProfile();
   }
 
   async asyncData ({ params, $http }) {
