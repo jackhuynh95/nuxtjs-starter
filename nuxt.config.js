@@ -1,5 +1,3 @@
-import viLang from './i18n/vi';
-import enLang from './i18n/en';
 import devEnv from './env/development';
 import prodEnv from './env/production';
 
@@ -51,7 +49,29 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxt/http',
     'nuxt-element-ui',
-    'nuxt-i18n',
+    ['nuxt-i18n',
+      {
+        strategy: 'no_prefix',
+        locales: [
+          {
+            code: 'en',
+            file: 'en.js'
+          },
+          {
+            code: 'vi',
+            file: 'vi.js'
+          },
+        ],
+        lazy: true,
+        langDir: 'i18n/',
+        defaultLocale: 'vi',
+        detectBrowserLanguage: {
+          useCookie: true,
+          cookieKey: 'language',
+          onlyOnRoot: true,  // recommended
+        },
+      }
+    ],
     'nuxt-clipboard2',
   ],
 
@@ -68,16 +88,4 @@ export default {
     components: ['Select', 'Option', 'Tooltip'],
     locale: 'en',
   },
-
-  i18n: {
-    locales: ['en', 'vi'],
-    defaultLocale: 'vi',
-    vueI18n: {
-      fallbackLocale: 'vi',
-      messages: {
-        vi: viLang,
-        en: enLang,
-      }
-    }
-  }
 }

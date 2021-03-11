@@ -4,8 +4,8 @@
     div {{ profile }}
     div {{ 9000 | numberWithComma }}
     .text-oswald(v-t='"header_menu.sign_in"')
-    NuxtLink(:to='localePath("/", "en")') English
-    NuxtLink(:to='localePath("/", "vi")') Viet Nam
+    NuxtLink(to='/' @click.prevent.stop.native='changeLocale("en")') English
+    NuxtLink(to='/' @click.prevent.stop.native='changeLocale("vi")') Viet Nam
     form(@submit.prevent='')
       input(v-model='text' name='text' v-validate='"required"')
       small.form-text.text-danger {{ veeErrors.first("text") }}
@@ -36,6 +36,12 @@ export default class Home extends mixins(FormMixin) {
 
   @State(state => state.account.profile)
   profile;
+
+  changeLocale(locale) {
+    this.$i18n.setLocale(locale);
+    window.location.reload();
+  }
+
 
   mounted() {
     console.log(process.env.NODE_ENV);
