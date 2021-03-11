@@ -1,19 +1,17 @@
 <template lang="pug">
-  Central(:hasChild='true')
-    div Authen
-    nuxt
+  AuthenLayout
     
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Component from "nuxt-class-component";
-import Central from './central.vue';
+import AuthenLayout from '@/components/layouts/authenLayout/AuthenLayout.vue';
 
 @Component({
   components: {
-    Central,
+    AuthenLayout,
   },
 })
-export default class AuthenLayout extends Vue {}
+export default class Authen extends Vue {}
 </script>

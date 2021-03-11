@@ -1,5 +1,5 @@
 <template lang="pug">
-  CentralLayout(:hasChild='hasChild')
+  CentralLayout
     
 </template>
 
@@ -12,12 +12,6 @@ import _ from 'lodash';
 @Component({
   components: {
     CentralLayout,
-  },
-  props: {
-    hasChild: {
-      type: Boolean,
-      default: false,
-    },
   },
 })
 export default class Central extends Vue {}
