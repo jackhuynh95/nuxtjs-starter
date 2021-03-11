@@ -1,5 +1,4 @@
 import accountStorage from '@/services/accountStorage';
-import SessionStorage from '@/services/sessionStorage';
 import Cookies from 'js-cookie';
 
 let locale = Cookies.get('language');
@@ -11,8 +10,7 @@ export default ({ app }) => {
   initStorePromise = Promise.resolve();
   router = app.router;
   store = app.store;
-  
-  // saveLocale();
+
   guardNagivation();
   updateTitlePage();
 }
@@ -28,7 +26,6 @@ function guardNagivation() {
             store.dispatch('account/getProfile');
           }
           
-          // SessionStorage.setRequiredAuth(requiresAuth);
           next();
           return null;
         }
@@ -46,7 +43,6 @@ function guardNagivation() {
             return null;
           }
           
-          // SessionStorage.setRequiredAuth(requiresAuth);
           next({});
           return null;
         });
@@ -138,14 +134,4 @@ function updateTitlePage() {
     // }
   });
 }
-
-// function saveLocale() {
-//   const params = new URLSearchParams(window.location.search);
-//   const language = params.get('language');
-
-//   if (!language) return;
-//   locale = language;
-//   Cookies.set('language', language);
-// }
-
 
