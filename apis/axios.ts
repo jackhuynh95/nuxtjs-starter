@@ -1,15 +1,11 @@
-import axios from 'axios';
-import { get } from 'lodash';
+import AxiosInstance from '@/plugins/axios';
 import EventEmitter from '@/services/eventEmitter';
 import AccountStorage from '@/services/accountStorage';
 
 let eventEmitter = new EventEmitter();
 export let eventObserable = eventEmitter.asObservable();
 
-const instance = axios.create({
-  baseURL: 'https://api-testing.fan8.club/api/',
-  // withCredentials: true,
-});
+const instance = AxiosInstance;
 
 instance.interceptors.response.use(
   (response) => {
