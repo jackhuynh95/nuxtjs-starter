@@ -28,7 +28,7 @@ div
   import FormMixin from '@/mixins/form';
   
   @Component({
-    layout: 'central',
+    layout: 'empty',
   })
   export default class Home extends mixins(FormMixin) {
     isLoading = false;
