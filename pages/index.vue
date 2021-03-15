@@ -32,6 +32,7 @@
           .icon.d-flex.align-items-center.justify-content-center
             font-awesome-icon.text-primary(:icon="['fab', 'tiktok']" )
 
+      TextBoxAutoHeight(v-model='text')
 
 </template> 
 
@@ -49,10 +50,14 @@ import Component from 'nuxt-class-component';
 import { mixins } from 'nuxt-property-decorator';
 import { State } from 'vuex-class';
 import FormMixin from '@/mixins/form';
+import TextBoxAutoHeight from '@/components/shared/MaskedInputAmount.vue';
 import AccountApis from '@/apis/account';
 
 @Component({
   layout: 'central',
+  components: {
+    TextBoxAutoHeight,
+  },
 })
 export default class Home extends mixins(FormMixin) {
   isLoading = false;

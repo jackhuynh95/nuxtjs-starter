@@ -25,7 +25,10 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    { src: '~/styles/style.styl', lang: 'styl'}
+    'quill/dist/quill.core.css',
+    'quill/dist/quill.bubble.css',
+    'quill/dist/quill.snow.css',
+    { src: '~/styles/style.styl', lang: 'styl'},
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -34,6 +37,8 @@ export default {
     '~plugins/filters.ts',
     '~plugins/directives.ts',
     '~plugins/router.ts',
+    { src: '~plugins/quill.ts', ssr: false},
+    { src: '~/libs/autoheight/autoheight.min.js', ssr: false },
   ],
 
   // Auto i port components: https://go.nuxtjs.dev/config-components
