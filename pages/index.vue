@@ -9,6 +9,29 @@
     form(@submit.prevent='')
       input(v-model='text' name='text' v-validate='"required"')
       small.form-text.text-danger {{ veeErrors.first("text") }}
+    
+    ul.social.list-inline.d-flex.flex-wrap.align-items-centerfont
+      li.pr-2.pr-md-2.pr-lg-3.my-1
+        a.d-inline-block.position-relative(href="https://www.facebook.com/Fan8club-106596241270784/" title="Facebook" target="_blank") 
+          .icon.d-flex.align-items-center.justify-content-center
+            font-awesome-icon.text-primary(:icon="['fab', 'facebook-f']" )
+      li.pr-2.pr-md-2.pr-lg-3.my-1
+        a.d-inline-block.position-relative(href="https://www.instagram.com/fan8.club/" title="instagram" target="_blank") 
+          .icon.d-flex.align-items-center.justify-content-center
+            font-awesome-icon.text-primary(:icon="['fab', 'instagram']" )
+      li.pr-2.pr-md-2.pr-lg-3.my-1
+        a.d-inline-block.position-relative(href="https://twitter.com/Fan8Club" title="twitter" target="_blank") 
+          .icon.d-flex.align-items-center.justify-content-center
+            font-awesome-icon.text-primary(:icon="['fab', 'twitter']" )
+      li.pr-2.pr-md-2.pr-lg-3.my-1
+        a.d-inline-block.position-relative(href="https://www.youtube.com/channel/UC2DRkIck7Dw5gqpD4k9qlVg" title="youtube" target="_blank") 
+          .icon.d-flex.align-items-center.justify-content-center
+            font-awesome-icon.text-primary(:icon="['fab', 'youtube']" )
+      li.pr-0
+        a.d-inline-block.position-relative(href="https://www.tiktok.com/@fan8.club" title="tiktok" target="_blank") 
+          .icon.d-flex.align-items-center.justify-content-center
+            font-awesome-icon.text-primary(:icon="['fab', 'tiktok']" )
+
 
 </template> 
 
