@@ -32,6 +32,7 @@ export default {
   plugins: [
     '~plugins/veeValidate.ts',
     '~plugins/filters.ts',
+    '~plugins/directives.ts',
     '~plugins/router.ts',
   ],
 
