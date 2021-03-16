@@ -1,5 +1,5 @@
+import AccountApis from '@/apis/account';
 import _ from 'lodash';
-
 interface IAccountStoreState {
   profile?: any;
 }
@@ -26,7 +26,7 @@ export const actions = {
     Get account details
   */
   getProfile(content: any) {
-    return Promise.resolve()
+    return AccountApis.getProfile()
       .then((profile: any) => {
         content.commit(MUTATION_TYPE.ACCOUNT_UPDATE_PROFILE, profile);
         return profile;
