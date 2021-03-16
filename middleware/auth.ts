@@ -1,14 +1,15 @@
 import accountStorage from '@/services/accountStorage';
 
 export default ({ store, route, redirect, app }) => {
-  guardNagivation({ store, route, redirect });
+  guardNagivation({ store, route, redirect, app });
 }
 
-function guardNagivation({ store, route, redirect }) {
+function guardNagivation({ store, route, redirect, app }) {
   let requiresAuth = route.meta.reduce((requiresAuth, meta) => meta.requiresAuth || requiresAuth, false);
+  let isLoggedIn = app.$cookiz.get('account.token') ? true : false;
 
   if (!requiresAuth || store.state.account.profile) {
-    if (!store.state.account.profile && accountStorage.isLoggedIn()) {
+    if (!store.state.account.profile && isLoggedIn) {
       store.dispatch('account/getProfile');
     }
     
@@ -17,7 +18,7 @@ function guardNagivation({ store, route, redirect }) {
   }
 
   let p = Promise.resolve();
-  if (accountStorage.isLoggedIn()) {
+  if (isLoggedIn) {
     p = store.dispatch('account/getProfile');
   }
 

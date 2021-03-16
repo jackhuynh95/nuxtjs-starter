@@ -8,9 +8,9 @@ export enum MUTATION_TYPE {
   'ACCOUNT_UPDATE_PROFILE' = 'ACCOUNT_UPDATE_PROFILE',
 }
 
-export const state: IAccountStoreState = {
+export const state = () => ({
   profile: undefined,
-};
+});
 
 export const mutations = {
   [MUTATION_TYPE.ACCOUNT_UPDATE_PROFILE](
