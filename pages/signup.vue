@@ -21,7 +21,10 @@ import Signup from '@/components/pages/signup/SignupPage.vue';
   layout: 'authen',
   components: {
     Signup,
-  }
+  },
+  meta: {
+    requiresAuth: false,
+  },
 })
 export default class SignupPage extends Vue {}
 </script>

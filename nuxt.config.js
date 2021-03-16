@@ -22,6 +22,10 @@ export default {
     ]
   },
 
+  router: {
+    middleware: ['auth']
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'element-ui/lib/theme-chalk/index.css',
@@ -36,8 +40,8 @@ export default {
     '~plugins/veeValidate.ts',
     '~plugins/filters.ts',
     '~plugins/directives.ts',
-    '~plugins/router.ts',
-    { src: '~plugins/quill.ts', ssr: false},
+    { src: '~plugins/router.ts', ssr: false },
+    { src: '~plugins/quill.ts', ssr: false },
     { src: '~/libs/autoheight/autoheight.min.js', ssr: false },
   ],
 

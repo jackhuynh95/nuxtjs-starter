@@ -21,7 +21,10 @@ import Login from '@/components/pages/login/LoginPage.vue';
   layout: 'authen',
   components: {
     Login,
-  }
+  },
+  meta: {
+    requiresAuth: false,
+  },
 })
 export default class Home extends Vue {}
 </script>

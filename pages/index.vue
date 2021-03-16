@@ -58,6 +58,9 @@ import AccountApis from '@/apis/account';
   components: {
     TextBoxAutoHeight,
   },
+  meta: {
+    requiresAuth: true,
+  },
 })
 export default class Home extends mixins(FormMixin) {
   isLoading = false;

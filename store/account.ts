@@ -9,7 +9,7 @@ export enum MUTATION_TYPE {
 }
 
 export const state: IAccountStoreState = {
-  profile: 123,
+  profile: undefined,
 };
 
 export const mutations = {
