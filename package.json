@@ -42,6 +42,7 @@
     "babel-jest": "^26.6.3",
     "babel-plugin-lodash": "^3.3.4",
     "dayjs": "^1.8.16",
+    "dayjs-plugin-utc": "^0.1.2",
     "enquire.js": "^2.1.6",
     "eventemitter3": "^4.0.0",
     "jest": "^26.6.3",
