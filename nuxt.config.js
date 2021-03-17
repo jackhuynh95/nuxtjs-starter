@@ -28,6 +28,12 @@ export default {
     base: '/',
     linkActiveClass: 'active',
     scrollBehavior: getScrollBehaviour(),
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '*',
+        component: resolve(__dirname, 'components/pages/notFound/NotFoundPage.vue')
+      })
+    },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
