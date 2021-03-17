@@ -44,8 +44,10 @@ export default {
     '~plugins/veeValidate.ts',
     '~plugins/filters.ts',
     '~plugins/directives.ts',
+    '~plugins/registerHooks.ts',
     { src: '~plugins/router.ts', ssr: false },
     { src: '~plugins/quill.ts', ssr: false },
+    { src: '~plugins/common.ts', ssr: false },
     { src: '~/libs/autoheight/autoheight.min.js', ssr: false },
   ],
 

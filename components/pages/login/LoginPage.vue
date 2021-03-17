@@ -14,22 +14,23 @@
 import Vue from 'vue';
 import Component from 'nuxt-class-component';
 import CopyClipBoard from '@/components/shared/CopyClipBoard.vue';
-import useCounter from '@/composables/useCounter';
-
+import useCounter from '@/compositions/useCounter';
 @Component({
   components: {
     CopyClipBoard,
   },
+  
+})
+export default class LoginPage extends Vue {
+  head(){}
   setup() {
     const { counter, twiceTheCounter } = useCounter();
 
     return {
-      counter, twiceTheCounter
+      counter, twiceTheCounter,
     };
   }
-})
-export default class LoginPage extends Vue {
-
-  mounted() {}
+  mounted() {
+  }
 }
 </script>
