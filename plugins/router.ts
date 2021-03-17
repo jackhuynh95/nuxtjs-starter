@@ -1,5 +1,4 @@
 import { isLoggedIn } from '@/services/accountStorage';
-import SessionAuth from '@/services/sessionAuth';
 import Cookies from 'js-cookie';
 
 let locale = Cookies.get('language');
@@ -11,10 +10,8 @@ export default ({ store, route, redirect, app }) => {
 
 
 function guardNagivation({ store, route, redirect, app }) {
-  const isAuth = route.meta.reduce((requiresAuth, meta) => meta.requiresAuth || requiresAuth, false);
-  
   app.router.afterEach((afterRoute) => {
-    const requiresAuth = afterRoute.name == route.name ? isAuth : SessionAuth.getRequired() ;
+    const requiresAuth = store.state.auth.required;
 
     if (!requiresAuth || store.state.account.profile) {
       if (!store.state.account.profile && isLoggedIn()) {
