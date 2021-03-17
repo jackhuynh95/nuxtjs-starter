@@ -57,6 +57,7 @@
     "text-mask-addons": "^3.8.0",
     "vue2-editor": "^2.10.2",
     "quill-image-drop-and-paste": "^1.1.1",
+    "sweetalert2": "^8.14.0",
     "vue-jest": "^3.0.4"
   }
 }
