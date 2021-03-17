@@ -6,7 +6,7 @@ export default ({ store, route, redirect, app }) => {
 
 function guardNagivation({ store, route, redirect, app }) {
   let requiresAuth = route.meta.reduce((requiresAuth, meta) => meta.requiresAuth || requiresAuth, false);
-  let isLoggedIn = app.$cookiz.get('account.token') ? true : false;
+  let isLoggedIn = app.$cookies.get('account.token') ? true : false;
 
   if (!requiresAuth || store.state.account.profile) {
     if (!store.state.account.profile && isLoggedIn) {

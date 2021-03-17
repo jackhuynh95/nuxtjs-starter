@@ -86,7 +86,7 @@ export default {
     ],
     'nuxt-clipboard2',
     '@nuxtjs/fontawesome',
-    ['cookie-universal-nuxt', { alias: 'cookiz' }],
+    ['cookie-universal-nuxt'],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
