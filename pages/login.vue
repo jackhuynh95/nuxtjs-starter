@@ -8,9 +8,6 @@
 <style lang="stylus" scoped>
 @import '~@/styles/variables'
 
-div
-  color color-success
-
 </style>
 
 <script>
@@ -30,8 +27,6 @@ import Toast from '@/services/toast';
 })
 export default class Home extends Vue {
 
-  mounted() {
-    Toast.showSuccess('123', '');
-  }
+  mounted() {}
 }
 </script>

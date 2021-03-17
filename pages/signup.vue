@@ -6,10 +6,7 @@
 
 <style lang="stylus" scoped>
 @import '~@/styles/variables'
-
-div
-  color color-success
-
+  
 </style>
 
 <script>
