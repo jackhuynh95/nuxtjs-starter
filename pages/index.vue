@@ -2,7 +2,6 @@
   .index-page
     .container
       h1 {{ ip }}
-      div {{ isMobile }}
 
 </template> 
 
