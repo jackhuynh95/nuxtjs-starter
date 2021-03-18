@@ -2,6 +2,7 @@
   .index-page
     .container
       h1 {{ ip }}
+      div {{ isMobile }}
 
 </template> 
 
@@ -16,6 +17,7 @@ import Component from 'nuxt-class-component';
 import { mixins } from 'nuxt-property-decorator';
 import { State } from 'vuex-class';
 import FormMixin from '@/mixins/form';
+import ResponsiveMixin from '@/mixins/responsive';
 
 @Component({
   layout: 'central',
@@ -24,7 +26,7 @@ import FormMixin from '@/mixins/form';
     requiresAuth: false,
   },
 })
-export default class Home extends mixins(FormMixin) {
+export default class Home extends mixins(FormMixin, ResponsiveMixin) {
   isLoading = false;
   text = '';
 

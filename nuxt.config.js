@@ -100,6 +100,7 @@ export default {
     'nuxt-clipboard2',
     '@nuxtjs/fontawesome',
     ['cookie-universal-nuxt'],
+    ['nuxt-mq'],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -187,6 +188,15 @@ export default {
       ],
     }
   },
+
+  'mq': {
+    breakpoints: {
+      mobile: 767,
+      tablet: 991,
+      smallMonitor: 1200,
+      largeMonitor: Infinity,
+    }
+  }
 }
 
 function getScrollBehaviour() {

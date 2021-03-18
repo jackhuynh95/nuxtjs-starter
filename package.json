@@ -23,6 +23,7 @@
     "nuxt-clipboard2": "^0.2.1",
     "nuxt-element-ui": "^1.0.10 ",
     "nuxt-i18n": "^6.20.6",
+    "nuxt-mq": "^2.0.2",
     "nuxt-property-decorator": "^2.9.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
