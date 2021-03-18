@@ -5,7 +5,7 @@
         img(src='./assets/404_logo.svg' alt='IMG')
       .text
         | It looks like you’re lost...
-      a.btn.btn-2.mx-auto(:href='"" | tutoricaLink') 
+      a.btn.btn-2.mx-auto(:href='"" | domainLink') 
         | Take me home
 
 </template>

@@ -5,7 +5,7 @@ let locale = Cookies.get('language');
 
 export default ({ store, route, redirect, app }) => {
   guardNagivation({ store, route, redirect, app });
-  updateTitlePage({ app });
+  // updateTitlePage({ app });
 }
 
 
