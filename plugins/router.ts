@@ -42,10 +42,10 @@ function updateTitlePage({ app }) {
   app.router.afterEach(route => {
     switch (locale) {
       case 'en':
-        document.title = 'Fan8.club – The platform to connect idols and fan';
+        document.title = 'NuxtJS – The Intuitive Vue Framework';
         break;
       case 'vi':
-        document.title = 'Fan8.club – Nền tảng tiên phong kết nối idol và fan hâm mộ toàn cầu';
+        document.title = 'NuxtJS – The Intuitive Vue Framework';
         break;
     }
   });

@@ -1,8 +1,6 @@
 import Cookies from 'js-cookie';
 const ACCOUNT_STORAGE_PREFIX = 'account.';
 const TOKEN = ACCOUNT_STORAGE_PREFIX + 'token';
-const REQUIRES = ACCOUNT_STORAGE_PREFIX + 'requires';
-const BLOCKED_SUPPORT = ACCOUNT_STORAGE_PREFIX + 'blocked_support';
 
 let account_token = '';
 
@@ -31,29 +29,6 @@ export function removeToken(domain = '') {
 
 export function logOut(domain = '') {
   removeToken(domain);
-  removeRequires();
-}
-
-export function getRequires() {
-  let requires = Cookies.get(REQUIRES);
-  return requires ? JSON.parse(requires) : {};
-}
-
-export function saveRequires(requires: Object) {
-  let format = JSON.stringify(requires);
-  Cookies.set(REQUIRES, format, { expires: 365 * 10 });
-}
-
-export function removeRequires() {
-  Cookies.remove(REQUIRES);
-}
-
-export function getBlockedSupport() {
-  return Cookies.get(BLOCKED_SUPPORT);
-}
-
-export function saveBlockedSupport(flag = true) {
-  return Cookies.set(BLOCKED_SUPPORT, flag);
 }
 
 export default {
@@ -62,9 +37,4 @@ export default {
   saveToken,
   removeToken,
   logOut,
-  getRequires,
-  saveRequires,
-  removeRequires,
-  getBlockedSupport,
-  saveBlockedSupport,
 };
