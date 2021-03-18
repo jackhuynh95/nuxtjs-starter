@@ -11,22 +11,6 @@ const http = {
 
 const apiResources: any = {
   account: {
-    registerStudent: {
-      url: '/register/student',
-      verb: 'POST',
-    },
-    registerTutor: {
-      url: '/register/tutor',
-      verb: 'POST',
-    },
-    loginStudent: {
-      url: '/login/student',
-      verb: 'POST',
-    },
-    loginTutor: {
-      url: '/login/tutor',
-      verb: 'POST',
-    },
     detail: {
       url: '/account/details',
       verb: 'POST',
