@@ -61,6 +61,7 @@
     "quill-image-drop-and-paste": "^1.1.1",
     "sweetalert2": "^8.14.0",
     "intersection-observer": "^0.5.1",
+    "lottie-web": "^5.5.3",
     "vue-jest": "^3.0.4"
   }
 }
