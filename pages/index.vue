@@ -1,7 +1,6 @@
 <template lang="pug">
   div
     h1 {{ ip }}
-    TextBoxAutoHeight(v-model='text')
 
 </template> 
 

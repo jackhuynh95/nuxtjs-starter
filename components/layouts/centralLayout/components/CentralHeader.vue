@@ -3,7 +3,7 @@
     nav.navbar.navbar-expand-md.padding-header.py-md-0(:class="{sticky:!isTop}")
       .container
         .d-flex.align-items-center.w-100
-          b-navbar-brand(:href='"" | domainLink')
+          b-navbar-brand(to='/' style='width: 70px;')
             img.img-fluid(src="~@/components/layouts/centralLayout/assets/logo.svg" alt="")
           button.navbar-toggler.ml-auto.text-right(type='button' @click='toggleBgOverlay')
             span.burger(:class='{clicked:showMenu}')
