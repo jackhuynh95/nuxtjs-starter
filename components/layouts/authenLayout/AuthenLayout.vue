@@ -36,7 +36,7 @@ export default class AuthenLayout extends Vue {
   mounted() {}
 
   get bgUrl() {
-    return require('./assets/bg-login-fan.png');
+    return require('./assets/bg_temp.png');
   }
 }
 </script>
