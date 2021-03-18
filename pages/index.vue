@@ -1,6 +1,7 @@
 <template lang="pug">
-  div
-    h1 {{ ip }}
+  .index-page
+    .container
+      h1 {{ ip }}
 
 </template> 
 
