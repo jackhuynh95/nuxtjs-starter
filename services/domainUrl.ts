@@ -3,7 +3,7 @@ function getDomainUrl() {
     return process.env.VUE_APP_BASE_DOMAIN_URL;
   }
 
-  return 'https://tutorica.vn/';
+  return '';
 }
 
 export default {
