@@ -1,7 +1,6 @@
 <template lang="pug">
   div
     Login
-    div {{ new Date() | dayjs('DD-MM-YYYY') }}
 
 </template> 
 
@@ -14,7 +13,6 @@
 import Vue from 'vue';
 import Component from 'nuxt-class-component';
 import Login from '@/components/pages/login/LoginPage.vue';
-import Toast from '@/services/toast';
 
 @Component({
   layout: 'authen',
